@@ -1,10 +1,10 @@
 # App Laravel
 
-This repository contains a Laravel application
+Este repositório contém uma aplicação Laravel
 
-## 🚀 Installation
+## 🚀 Instalação
 
-**To install the application on your machine, follow the steps below:**
+**Para instalar a aplicação em sua máquina, siga os passos abaixo:**
 
 ```bash
 git clone https://github.com/oGuilherme1/teste-back-end-logzz.git
