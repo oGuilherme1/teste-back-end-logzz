@@ -186,5 +186,32 @@
         </form>
     </x-modal>
 
+    <script>
+        function handlePageChange(page, lastPage) {
+            // Verifica se a página solicitada é válida
+            if (page < 1 || page > lastPage) {
+                return;
+            }
+
+            // Cria uma URL com base na página solicitada
+            const url = new URL(window.location.href);
+            url.searchParams.set('page', page);
+
+            // Redireciona para a nova URL com a página atualizada
+            window.location.href = url.toString();
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const priceInput = document.querySelector('input[name="price"]');
+            const priceTable = document.querySelector('.price')
+            if (priceInput) {
+                applyCurrencyMask(priceInput);
+            }
+            if (priceTable) {
+                applyCurrencyMask(priceTable);
+            }
+        });
+    </script>
+
 
 </x-app-layout>
