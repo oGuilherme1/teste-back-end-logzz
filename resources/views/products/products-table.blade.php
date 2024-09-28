@@ -50,12 +50,12 @@
                                 <th class="w-2/4 px-5 py-2 text-xs font-medium leading-4 tracking-wider text-left text-gray-500 uppercase border-b border-gray-200 bg-gray-50">Nome</th>
                                 <th class="w-1/6 px-5 py-2 text-xs font-medium leading-4 tracking-wider text-left text-gray-500 uppercase border-b border-gray-200 bg-gray-50">Preço</th>
                                 <th class="w-1/6 px-5 py-2 text-xs font-medium leading-4 tracking-wider text-left text-gray-500 uppercase border-b border-gray-200 bg-gray-50">Categoria</th>
-                                <th class="w-1/6 px-5 py-2 text-xs font-medium leading-4 tracking-wider text-center text-gray-500 uppercase border-b border-gray-200 bg-gray-50">Imagem</th>
-                                <th class="w-2/4 px-5 py-2 border-b border-gray-200 bg-gray-50">
+                                <th class="w-4/4 px-5 py-2 text-xs font-medium leading-4 tracking-wider text-center text-gray-500 uppercase border-b border-gray-200 bg-gray-50">Imagem</th>
+                                <th class="w-2/6 px-5 py-2 border-b border-gray-200 bg-gray-50">
                                     <button
                                         x-data=""
                                         x-on:click.prevent="$dispatch('open-modal', 'create-product')"
-                                        class="bg-white border-2 w-42 border-black rounded-lg text-gray-900 px-6 py-1 text-base hover:border-green-600 hover:text-green-600 cursor-pointer transition">
+                                        class="bg-white border-2 w-46  border-black rounded-lg text-gray-900 px-6 py-1 text-base hover:border-green-600 hover:text-green-600 cursor-pointer transition">
                                         Criar Produto
                                     </button>
                                 </th>
