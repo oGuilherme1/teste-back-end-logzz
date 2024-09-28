@@ -1,0 +1,45 @@
+version: '3.8'
+
+services:
+  postgres_container_logzz:
+    image: postgres:latest
+    container_name: postgres_logzz
+    environment:
+      POSTGRES_USER: ${DB_USERNAME}
+      POSTGRES_PASSWORD: ${DB_PASSWORD}
+      POSTGRES_DB: ${DB_DATABASE}
+    ports:
+      - "5432:5432"
+    networks:
+      - logzz
+
+  laravel_container_logzz:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: laravel_logzz
+    environment:
+      - DB_HOST=postgres_logzz
+      - REDIS_HOST=redis_logzz 
+    ports:
+      - "8000:8000"
+    networks:
+      - logzz
+    depends_on:
+      - postgres_container_logzz
+      - redis_container_logzz 
+    volumes:
+      - ./:/app
+    working_dir: /app
+
+  redis_container_logzz:
+    image: redis:latest
+    container_name: redis_logzz
+    ports:
+      - "6379:6379" 
+    networks:
+      - logzz
+
+networks:
+  logzz:
+    name: logzz
