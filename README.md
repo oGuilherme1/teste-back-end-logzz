@@ -39,6 +39,10 @@ php artisan migrate
 ```
 
 ```bash
+php artisan storage:link
+```
+
+```bash
 npm run dev
 ```
 
